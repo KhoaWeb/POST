@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trang web đăng bài</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .post-form {
+            width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        .post-form label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .post-form input[type="text"],
+        .post-form textarea {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+        .post-form input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .post-form input[type="submit"]:hover {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+<body>
+    <h1>Trang web đăng bài</h1>
+    <div class="post-form">
+        <form action="/submit-post" method="POST" enctype="multipart/form-data">
+            <label for="title">Tiêu đề:</label>
+            <input type="text" id="title" name="title">
+            
+            <label for="content">Nội dung:</label>
+            <textarea id="content" name="content"></textarea>
+            
+            <label for="image">Hình ảnh:</label>
+            <input type="file" id="image" name="image">
+            
+            <input type="submit" value="Đăng bài">
+        </form>
+    </div>
+</body>
+</html>
